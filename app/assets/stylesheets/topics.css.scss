@@ -1,0 +1,16 @@
+// Place all the styles related to the topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background: url('../images/gunnin.png');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+* {
+	-moz-box-sizing: border-box; /* Firefox */
+	-webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+	box-sizing: border-box; /* IE */
+}

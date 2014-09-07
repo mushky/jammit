@@ -1,0 +1,3 @@
+== README
+
+Add Devise or other User Authentication to prevent users from multi-voting.
