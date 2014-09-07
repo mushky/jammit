@@ -11,10 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-body {
-	background: url(<%= asset_path "gunnin.png" %>);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-}
