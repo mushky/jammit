@@ -9,25 +9,32 @@
         <div class="carousel-inner">
           <div class="item active">
             <div class="imageResize">
-            <%= image_tag "gunnin.png" %>
+            <%= image_tag "alaTurca.jpg" %>
             <br>
-              you're disgusting
+              <h5>wanna go to ala turca?!</h5>
             </div>
           </div>
           <div class="item">
             <%= image_tag "tandooriChicken.jpg" %>
             <br>
-              Of course theres chicken!
+              <h5>Of course we got chicken!</h5>
           </div>
           <div class="item">
             <%= image_tag "halfBaked.png" %>
             <br>
-              AND ICE CREAM! 
+              <h5>AND ICE CREAM!</h5>
           </div>
           <div class="item">
             <%= image_tag "Qalyoon.jpg" %>
             <br>
-              SHEESHA ASSHOLES!
+              <h5>SMOKIN' SHEESHA TO THE DOME!</h5>
+          </div>
+          <div class="item">
+            <div class="imageResize">
+              <%= image_tag "gunnin.png" %>
+            </div> <!-- /resize --> 
+              <br>
+              <h5>you're disgusting!</h5>
           </div>
         </div>
       </center>
@@ -49,7 +56,7 @@
       </thead>
 
       <tbody>
-    <% @topics.each do |topic| %>
+      <% @topics.each do |topic| %>
       <tr>
         <td><%= link_to topic.title, topic %></td>
         <td><%= pluralize(topic.votes.count, "vote") %></td>
