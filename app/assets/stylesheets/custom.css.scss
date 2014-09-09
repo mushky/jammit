@@ -1,11 +1,8 @@
 #countdown { 
 	font-family: impact; 
-	font-size: 40px;
-	color: red;
+	font-size: 60px;
 	border-radius: 20px;
 	display: inline-block;
-	background: black;
-	padding: 20px;
 	padding-top: 20px;
 }
 
@@ -16,12 +13,8 @@
 h1 { 
 	font-family: impact; 
 	font-size: 40px;
-	color: red;
-	background: black;
 	letter-spacing: 10px;
 	border-radius: 10px;
-	height: 50px;
-  width: 500px;
   position: relative;
 }
 
@@ -40,4 +33,9 @@ p {
 .imageResize {
 	width: 30%;
 	height: 20%;
+}
+
+.upvote {
+	height: 50px;
+	width: 50px;
 }

@@ -60,7 +60,7 @@
       <tr>
         <td><%= link_to topic.title, topic %></td>
         <td><%= pluralize(topic.votes.count, "vote") %></td>
-        <td><%= button_to '+1', upvote_topic_path(topic), method: :post %></td>
+        <td><div class="upvote"><%= link_to image_tag('upvote.png'), upvote_topic_path(topic), method: :post %></div></td>
         <td><%= link_to 'Delete', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -69,5 +69,5 @@
     <br>
     <button type="button" class="btn btn-primary"><div class="color"><%= link_to 'Create New Activity', new_topic_path %></div></button>
     <br><br>
-    <em>you're disgusting</em>
+  <em>you're disgusting</em>
 </div> <!-- /container -->
