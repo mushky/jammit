@@ -61,7 +61,7 @@
       <% @topics.each do |topic| %>
       <tr>
         <td><h4><%= link_to topic.title, topic %></h4></td>
-        <td><h5><div class="paddingLeft"><%= pluralize(topic.votes.count, "vote") %></h5></div></td>
+        <td><div class="paddingLeft"><h5><%= pluralize(topic.votes.count, "vote") %></div></h5></td>
         <td><div class="upvote"><%= link_to image_tag('upvote.png'), upvote_topic_path(topic), method: :post %></div></td>
         <td><%= link_to 'DELETE ACTIVITY', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
