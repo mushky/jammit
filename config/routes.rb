@@ -1,7 +1,7 @@
 Voterapp::Application.routes.draw do
   resources :topics do
     member do
-      post 'upvote', 'downvote'
+      post 'upvote'
     end
   end
 
