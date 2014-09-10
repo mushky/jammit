@@ -1,18 +1,7 @@
-#countdown { 
-	font-family: impact; 
-	font-size: 60px;
-	border-radius: 20px;
-	display: inline-block;
-	padding-top: 20px;
-}
+/**********************
+00=LAYOUT
+**********************/
 
-.color {
-	color: #000000;
-}
-
-.spacing {
-	padding-bottom: 40px;
-}
 h1 { 
 	font-family: impact; 
 	font-size: 40px;
@@ -26,6 +15,31 @@ p {
 	font-family: impact;
 	letter-spacing: 5px;
 }
+
+/**********************
+01=COUNTDOWN
+**********************/
+
+#countdown { 
+	font-family: impact; 
+	font-size: 60px;
+	border-radius: 20px;
+	display: inline-block;
+	padding-top: 20px;
+}
+
+/**********************
+02=MISC
+**********************/
+
+.color {
+	color: #000000;
+}
+
+.spacing {
+	padding-bottom: 40px;
+}
+
 
 .moveDown {
 	padding-top: 150px;
