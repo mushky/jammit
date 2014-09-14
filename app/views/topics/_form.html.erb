@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(@topic) do |f| %>
   <% if @topic.errors.any? %>
     <div id="error_explanation">
@@ -22,4 +23,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div> <!-- /container -->
 <% end %>

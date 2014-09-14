@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JAMJUA DAY!</title>
+  <title>JAMMIT</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= favicon_link_tag 'monkeyEmoji.png' %>
@@ -19,7 +19,8 @@
 	  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
 	  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 	<% end %>
-	
+	</div> <!-- navbar-text pull-right -->
+
 		<center>
 		<script>
 		var end = new Date('09/18/2014 10:1 AM');
@@ -59,16 +60,7 @@
 		<% flash.each do |name,msg| %>
 		  <div><%= msg %></div>
 		<% end %>
-		<script type="text/javascript">
-		var _bftn_options = {
-		animation: 'banner',
-		url: 'http://campaigns.dailykos.com/p/dia/action3/common/public/?action_KEY=1035'
-		position: 'bottomright',
-		theme: 'dark'
-		}
-		</script>
-		 
-		<script src="//fightforthefuture.github.io/battleforthenet-widget/widget.min.js" async> </script>
+
 		<% if notice %>
 		  <p class="alert alert-success"><%= notice %></p>
 		<% end %>
