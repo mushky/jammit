@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index
-    @topics = Topic.all
+    @topics = Topic.includes(:votes).order("votes.created_at desc")
   end
 
   def show
