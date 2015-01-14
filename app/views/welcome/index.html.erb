@@ -43,14 +43,23 @@
       <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
     <center>
+    	<%= link_to "Enter Jammit", topics_path, class: "btn btn-warning" %>
       <div class="carousel-inner">
+      	<br>
         <div class="item active">
           <div class="imageResize">
-            <%= image_tag "alaTurca.jpg" %>
+            <%= image_tag "jamjuaBurrito.jpg" %>
             <br>
             <h5>wanna go to ala turca?!</h5>
           </div>
           </div>
+					<div class="item">
+            <div class="imageResize">
+              <%= image_tag "alaTurca.jpg" %>
+            </div>
+            <br>
+            <h5>Jamjua Burrito</h5>
+        </div>
           <div class="item">
             <%= image_tag "tandooriChicken.jpg" %>
             <br>
@@ -80,13 +89,7 @@
             <br>
             <h5>COSMOS AMIRITE??!</h5>
         </div>
-            <div class="item">
-            <div class="imageResize">
-              <%= image_tag "jamjuaBurrito.jpg" %>
-            </div>
-            <br>
-            <h5>Jamjua Burrito</h5>
-        </div>
+
 
       </center>
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -96,7 +99,3 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
-
-      <center>
-      	<%= link_to "Enter Jammit", topics_path, class: "btn btn-default" %>
-			</center>
