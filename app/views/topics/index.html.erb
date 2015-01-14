@@ -35,7 +35,7 @@
         </tr>
       </thead>  
       <tbody>
-      <%= link_to 'Create New Jammit', new_topic_path, class: "btn btn-default" %>
+      <%= link_to 'Create New Jammit', new_topic_path, class: "btn btn-primary" %>
       <% @topics.each do |topic| %>
       <tr>
         <td><h4><%= link_to topic.title, topic %></h4></td>
