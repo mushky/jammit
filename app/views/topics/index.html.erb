@@ -1,70 +1,46 @@
 <div class="container">
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-    <center>
-      <div class="carousel-inner">
-        <div class="item active">
-          <div class="imageResize">
-            <%= image_tag "alaTurca.jpg" %>
-            <br>
-            <h5>wanna go to ala turca?!</h5>
-          </div>
-          </div>
-          <div class="item">
-            <%= image_tag "tandooriChicken.jpg" %>
-            <br>
-            <h5>Of course we got chicken!</h5>
-          </div>
-          <div class="item">
-            <%= image_tag "halfBaked.png" %>
-            <br>
-            <h5>AND ICE CREAM!</h5>
-          </div>
-          <div class="item">
-            <%= image_tag "Qalyoon.jpg" %>
-            <br>
-            <h5>SMOKIN' SHEESHA TO THE DOME!</h5>
-          </div>
-          <div class="item">
-            <div class="imageResize">
-              <%= image_tag "gunnin.png" %>
-            </div> <!-- /resize --> 
-              <br>
-              <h5>you're disgusting!</h5>
-          </div>
-          <div class="item">
-            <div class="imageResize">
-              <%= image_tag "cosmos.jpg" %>
-            </div>
-            <br>
-            <h5>COSMOS AMIRITE??!</h5>
-        </div>
-      </center>
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-      </div>
-    <table>
-      <thead>
-        <tr>
-        <h2>ACTIVITIES!</h2>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
+<script>
+  var end = new Date('02/14/2015 9:00 AM');
+
+  var _second = 1000;
+  var _minute = _second * 60;
+  var _hour = _minute * 60;
+  var _day = _hour * 24;
+  var timer;
+
+  function showRemaining() {
+    var now = new Date();
+    var distance = end - now;
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById('topicPageCountDown').innerHTML = 'VOTING IS OVER JERK FACES';
+        return;
+      }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('topicPageCountDown').innerHTML = days + 'days ';
+        document.getElementById('topicPageCountDown').innerHTML += hours + 'hrs ';
+        document.getElementById('topicPageCountDown').innerHTML += minutes + 'mins ';
+        document.getElementById('topicPageCountDown').innerHTML += seconds + 'secs' + " To Jamjua Day!";
+      }
+
+      timer = setInterval(showRemaining, 1000);
+    </script>
+  <div id="topicPageCountDown"></div>
+
+</div>
+<table>
+  <thead>
+    <tr>
+      <h2><em>Welcome to Jammit</em></h2>
         </tr>
       </thead>  
 
       <tbody>
-      <center><button type="button" class="btn-lg btn-primary"><div class="color"><%= link_to 'Create New Activity', new_topic_path %></div></button>
-      </center>
+      <%= link_to 'Create New Jammit', new_topic_path, class: "btn btn-default" %>
       <% @topics.each do |topic| %>
       <tr>
         <td><h4><%= link_to topic.title, topic %></h4></td>

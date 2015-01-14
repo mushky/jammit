@@ -8,7 +8,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-	<body>
+	<body> 
 	<div class="container">
 		<nav class="navbar navbar-default navbar-static-top" role="navigation">
 			<div class="navbar-header">
@@ -22,52 +22,7 @@
 			<% end %>
 			</div> <!-- navbar-text pull-right -->
 		</nav>
-		<center>
-		<script>
-			var end = new Date('09/19/2015 5:00 PM');
-
-			var _second = 1000;
-			var _minute = _second * 60;
-			var _hour = _minute * 60;
-			var _day = _hour * 24;
-			var timer;
-
-			function showRemaining() {
-				var now = new Date();
-				var distance = end - now;
-				if (distance < 0) {
-					clearInterval(timer);
-					document.getElementById('countdown').innerHTML = 'VOTING IS OVER JERK FACES';
-					return;
-				}
-				var days = Math.floor(distance / _day);
-				var hours = Math.floor((distance % _day) / _hour);
-				var minutes = Math.floor((distance % _hour) / _minute);
-				var seconds = Math.floor((distance % _minute) / _second);
-
-				document.getElementById('countdown').innerHTML = days + 'days ';
-				document.getElementById('countdown').innerHTML += hours + 'hrs ';
-				document.getElementById('countdown').innerHTML += minutes + 'mins ';
-				document.getElementById('countdown').innerHTML += seconds + 'secs';
-			}
-
-			timer = setInterval(showRemaining, 1000);
-		</script>
 		
-		<div id="countdown"></div>
-
-		<h2> UNTIL JAMJUA DAY!!!! </h2>
-		</center>
-		<% flash.each do |name,msg| %>
-		  <div><%= msg %></div>
-		<% end %>
-
-		<% if notice %>
-		  <p class="alert alert-success"><%= notice %></p>
-		<% end %>
-		<% if alert %>
-		  <p class="alert alert-danger"><%= alert %></p>
-		<% end %>		 
 		<%= yield %>
 		</div> <!-- /container -->
 	</body>
