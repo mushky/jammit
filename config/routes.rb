@@ -2,6 +2,7 @@ Voterapp::Application.routes.draw do
   get "welcome/index"
   devise_for :users
   resources :topics do
+    resources :comments
     member do
       post 'upvote'
       delete 'downvote'

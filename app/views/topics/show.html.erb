@@ -2,14 +2,38 @@
 	<p id="notice"><%= notice %></p>
 
 	<p>
-	  <strong>Activity!:</strong>
-	  <%= @topic.title %>
+	  <h3><%= @topic.title %></h3>
 	</p>
 
 	<p>
-	  <strong>Description:</strong>
 	  <%= @topic.description %>
 	</p>
+	_______________________________________
+	<% @topic.comments.each do |comment| %>
+  <p>
+    <strong><%= comment.commenter %>:</strong>
+  </p>
+ 
+  <p>
+    <%= comment.body %>
+  </p>
+  ________________________________________
+	<% end %>
+
+	<h4>Comments:</h4>
+	<%= form_for([@topic, @topic.comments.build]) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :TextsAndStuff %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit class: "btn btn-warning" %>
+  </p>
+<% end %>
 
 	<%= link_to 'Edit', edit_topic_path(@topic) %> |
 	<%= link_to 'Back', topics_path %>

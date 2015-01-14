@@ -8,9 +8,20 @@
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
+#
+# It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20150114044748) do
 
-ActiveRecord::Schema.define(version: 20140914044006) do
+  create_table "comments", force: true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["topic_id"], name: "index_comments_on_topic_id"
 
   create_table "topics", force: true do |t|
     t.string   "title"
