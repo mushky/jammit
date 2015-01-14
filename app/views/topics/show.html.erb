@@ -20,14 +20,16 @@
   ________________________________________
 	<% end %>
 
-	<h4>Comments:</h4>
+	<h4>Leave a Comment?</h4>
+	<em>Its okay comments can't be downvoted... yet...</em>
+	<br>
 	<%= form_for([@topic, @topic.comments.build]) do |f| %>
   <p>
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :commenter %>
   </p>
   <p>
-    <%= f.label :TextsAndStuff %><br>
+    <%= f.label :comment %>
     <%= f.text_area :body %>
   </p>
   <p>
