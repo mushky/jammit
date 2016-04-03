@@ -1,0 +1,55 @@
+/**********************
+00=LAYOUT
+**********************/
+
+body {
+	background: url('../images/gunnin.png');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+* {
+	-moz-box-sizing: border-box; /* Firefox */
+	-webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+	box-sizing: border-box; /* IE */
+}
+
+h1 { 
+	font-family: impact; 
+	font-size: 40px;
+	color: red;
+	background: black;
+	letter-spacing: 10px;
+	border-radius: 10px;
+	height: 50px;
+  width: 500px;
+  position: relative;
+}
+
+p {
+	color: red;
+	font-size: 20px;
+	font-family: impact;
+	letter-spacing: 5px;
+}
+
+/**********************
+01=COUNTDOWN
+**********************/
+#countdown { 
+	font-family: impact; 
+	font-size: 40px;
+	color: red;
+	border-radius: 20px;
+	display: inline-block;
+	background: black;
+	padding: 20px;
+}
+
+
+
+.moveDown {
+	padding-top: 150px;
+	float: right;
+}
