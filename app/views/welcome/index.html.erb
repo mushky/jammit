@@ -1,42 +1,98 @@
-<center>
-	<script>
-		/*var end = new Date('02/14/2015 9:00 AM');*/
-    var end = new Date('04/09/2016 7:00 PM')
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-		var _second = 1000;
-		var _minute = _second * 60;
-		var _hour = _minute * 60;
-		var _day = _hour * 24;
-		var timer;
+    <title>Jamjua Day!</title>
 
-		function showRemaining() {
-			var now = new Date();
-			var distance = end - now;
-			if (distance < 0) {
-				clearInterval(timer);
-				document.getElementById('countdown').innerHTML = 'VOTING IS OVER JERK FACES';
-				return;
-			}
-			var days = Math.floor(distance / _day);
-			var hours = Math.floor((distance % _day) / _hour);
-			var minutes = Math.floor((distance % _hour) / _minute);
-			var seconds = Math.floor((distance % _minute) / _second);
+    <!-- Bootstrap core CSS -->
 
-			document.getElementById('countdown').innerHTML = days + 'days ';
-			document.getElementById('countdown').innerHTML += hours + 'hrs ';
-			document.getElementById('countdown').innerHTML += minutes + 'mins ';
-			document.getElementById('countdown').innerHTML += seconds + 'secs';
-		}
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+            </div>
+          </div>
+          <div class="inner cover">
+            <h1 class="cover-heading">JAMMIT</h1>
+            <p class="lead">  
+              <script>
+                /*var end = new Date('02/14/2015 9:00 AM');*/
+                var end = new Date('04/09/2016 7:00 PM')
 
-		timer = setInterval(showRemaining, 1000);
-		</script>
-		
-		<div id="countdown"></div>
-	<h3>UNTIL MEOW DAY</h3>
-</center> 
-<div>
+                var _second = 1000;
+                var _minute = _second * 60;
+                var _hour = _minute * 60;
+                var _day = _hour * 24;
+                var timer;
 
-<div class="container">
+                function showRemaining() {
+                  var now = new Date();
+                  var distance = end - now;
+                  if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById('countdown').innerHTML = 'VOTING IS OVER JERK FACES';
+                    return;
+                  }
+                  var days = Math.floor(distance / _day);
+                  var hours = Math.floor((distance % _day) / _hour);
+                  var minutes = Math.floor((distance % _hour) / _minute);
+                  var seconds = Math.floor((distance % _minute) / _second);
+
+                  document.getElementById('countdown').innerHTML = days + 'days ';
+                  document.getElementById('countdown').innerHTML += hours + 'hrs ';
+                  document.getElementById('countdown').innerHTML += minutes + 'mins ';
+                  document.getElementById('countdown').innerHTML += seconds + 'secs';
+                }
+
+                timer = setInterval(showRemaining, 1000);
+              </script>
+    
+            <div id="countdown"></div>
+            </p>
+            <h3>UNTIL MEOW DAY</h3>
+            <p class="lead">
+              <%= link_to "ENTER JAMMIT", topics_path, class: "btn btn-lg btn-danger"  %>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              You're disgusting
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
+<!-- <div class="container">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -44,48 +100,48 @@
       <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
     <center>
-    	<%= link_to "ENTER JAMMIT", topics_path, class: "btn btn-warning btn-lg" %>
+    	<%#= link_to "ENTER JAMMIT", topics_path, class: "btn btn-warning btn-lg" %>
       <div class="carousel-inner">
       	<br>
         <div class="item active">
           <div class="imageResize">
-            <%= image_tag "jamjuaBurrito.jpg" %>
+            <%#= image_tag "jamjuaBurrito.jpg" %>
             <br>
             <h5>a jamrito in the wild</h5>
           </div>
           </div>
 					<div class="item">
             <div class="imageResize">
-              <%= image_tag "alaTurca.jpg" %>
+              <%#= image_tag "alaTurca.jpg" %>
             </div>
             <br>
             <h5>wanna go to ala turca?!</h5>
         </div>
           <div class="item">
-            <%= image_tag "tandooriChicken.jpg" %>
+            <%#= image_tag "tandooriChicken.jpg" %>
             <br>
             <h5>Of course we got chicken!</h5>
           </div>
           <div class="item">
-            <%= image_tag "halfBaked.png" %>
+            <%#= image_tag "halfBaked.png" %>
             <br>
             <h5>AND ICE CREAM!</h5>
           </div>
           <div class="item">
-            <%= image_tag "Qalyoon.jpg" %>
+            <%#= image_tag "Qalyoon.jpg" %>
             <br>
             <h5>SMOKIN' SHEESHA TO THE DOME!</h5>
           </div>
           <div class="item">
             <div class="imageResize">
-              <%= image_tag "gunnin.png" %>
-            </div> <!-- /resize --> 
-            <br>
+              <%#= image_tag "gunnin.png" %>
+            </div> <! /resize --> 
+        <!--    <br>
             <h5>you're disgusting!</h5>
           </div>
           <div class="item">
             <div class="imageResize">
-              <%= image_tag "cosmos.jpg" %>
+              <%#= image_tag "cosmos.jpg" %>
             </div>
             <br>
             <h5>COSMOS AMIRITE??!</h5>
@@ -99,4 +155,4 @@
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
-      </div>
+      </div> -->

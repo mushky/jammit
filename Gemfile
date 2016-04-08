@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'font-awesome-sass', '~> 4.5.0'
 
 group :doc do
   gem 'sdoc', require: false

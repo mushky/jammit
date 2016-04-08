@@ -27,27 +27,45 @@
       timer = setInterval(showRemaining, 1000);
     </script>
   <div id="topicPageCountDown"></div>
-</div>
-<table>
-  <thead>
-    <tr>
-      <h2> Welcome to Jammit </h2>
-        </tr>
-      </thead>  
-      <tbody>
-      <%= link_to 'Create New Jammit', new_topic_path, class: "btn btn-primary" %>
-      <% @topics.each do |topic| %>
+
+  <table class="table table-bordered">
+    <thead>
       <tr>
-        <td><h4><%= link_to topic.title, topic %></h4></td>
-        <td><div class="paddingLeft"><h5><%= pluralize(topic.votes.count, "vote") %></div></h5></td>
-        <td><div class="upvote"><%= link_to image_tag('upvote.png'), upvote_topic_path(topic), method: :post %></div></td>
-        <td><div class="upvote"><%= link_to image_tag('downvote.png'), downvote_topic_path(topic), method: :delete, data: { confirm: "Downvotes are mean guize..." } %></div></td>
-        <td><%= link_to 'DELETE ACTIVITY', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+        <h2><em>Welcome to Jammit</em></h2>
+          </tr>
+        </thead>  
+        <tbody>
+          <%= link_to 'Create New Jammit', new_topic_path, class: "btn btn-danger" %>
+          <hr/>
+          <% @topics.each do |topic| %>
+          <tr clas>
+            <td>
+              <h4><%= link_to topic.title, topic %></h4>
+            </td>
+            <td>
+              <div class="paddingLeft">
+                <h5><%= pluralize(topic.votes.count, "vote") %></h5>
+              </div>
+            </td>
+            <td>
+              <span class="quiet">
+                <small><%= time_ago_in_words(topic.created_at) %> ago</small>
+              </span>
+            </td>
+            <td>
+              <%= link_to '<i class="fa fa-arrow-up fa-2x"></i>'.html_safe, upvote_topic_path(topic), method: :post %>                
+            </td>
+            <td>
+              <%= link_to '<i class="fa fa-arrow-down fa-2x"></i>'.html_safe, downvote_topic_path(topic), method: :delete, data: { confirm: "Downvotes are mean guize..." } %>
+            </td>
+            <td>
+              <%= link_to 'DELETE ACTIVITY', topic, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
-    <div class="spacing"></div>
-  <em>¯\_(ツ)_/¯ you're disgusting ( ͡° ͜ʖ ͡°)</em>
+  <div class="spacing"></div>
+  <em>you're disgusting</em>
   <div class="spacing"></div>
 </div> <!-- /container -->
