@@ -5,7 +5,6 @@
 h1 { 
 	font-family: sans-serif; 
 	font-size: 40px;
-	letter-spacing: 10px;
 	border-radius: 10px;
   position: relative;
 }
@@ -28,7 +27,7 @@ p {
 
 #countdown { 
 	font-family: impact; 
-	font-size: 50px;
+	font-size: 40px;
 	border-radius: 20px;
 	display: inline-block;
 	padding-top: 20px;
@@ -67,4 +66,25 @@ p {
 
 .paddingLeft {
 	padding-left: 50px;
+}
+
+.table-font-color {
+	color: #9b59b6;
+}
+
+.jammit-style {
+	color: #ecf0f1;
+}
+
+.count-down-style {
+	color: #ecf0f1;
+	font-size: 20px;
+}
+
+.your-disgusting {
+	color: #ecf0f1;
+}
+
+.white-color {
+	color: #ecf0f1;
 }

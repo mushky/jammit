@@ -26,29 +26,30 @@
         }
       timer = setInterval(showRemaining, 1000);
     </script>
-  <div id="topicPageCountDown"></div>
+  <div id="topicPageCountDown" class="count-down-style"></div>
 
-  <table class="table table-bordered">
+  <table class="table table-bordered well">
     <thead>
       <tr>
-        <h2><em>Welcome to Jammit</em></h2>
+        <h1 class="jammit-style">JAMMIT NOW!</h1>
           </tr>
         </thead>  
         <tbody>
           <%= link_to 'Create New Jammit', new_topic_path, class: "btn btn-danger" %>
-          <hr/>
+          <br><br>
           <% @topics.each do |topic| %>
-          <tr clas>
+          <div class="table-font-color">
+          <tr>
             <td>
-              <h4><%= link_to topic.title, topic %></h4>
+              <h4 class="table-font-color"><%= link_to topic.title, topic %></h4>
             </td>
             <td>
-              <div class="paddingLeft">
+              <div class="paddingLeft table-font-color">
                 <h5><%= pluralize(topic.votes.count, "vote") %></h5>
               </div>
             </td>
             <td>
-              <span class="quiet">
+              <span class="quiet table-font-color">
                 <small><%= time_ago_in_words(topic.created_at) %> ago</small>
               </span>
             </td>
@@ -62,10 +63,13 @@
               <%= link_to 'DELETE ACTIVITY', topic, method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>
           </tr>
+        </div><!-- /table-font-color -->
         <% end %>
       </tbody>
     </table>
-  <div class="spacing"></div>
-  <em>you're disgusting</em>
+    <div class="spacing"></div>
+    <div class="your-disgusting">
+      <em>you're disgusting</em>
+    </div>
   <div class="spacing"></div>
 </div> <!-- /container -->

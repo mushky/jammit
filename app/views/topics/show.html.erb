@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="white-color">
 	<p id="notice"><%= notice %></p>
 
 	<p>
@@ -8,7 +9,6 @@
 	<p>
 	  <%= @topic.description %>
 	</p>
-	_______________________________________
 	<% @topic.comments.each do |comment| %>
   <p>
     <strong><%= comment.commenter %>:</strong>
@@ -17,10 +17,8 @@
   <p>
     <%= comment.body %>
   </p>
-  ________________________________________<br>
 	<% end %>
   
-  ¯\_(ツ)_/¯ | ( ͡° ͜ʖ ͡°) | ¯\_(ツ)_/¯ | ( ͡° ͜ʖ ͡°) | ¯\_(ツ)_/¯ | ( ͡° ͜ʖ ͡°)                                
 	<h4>Leave a Comment?</h4>
 	<em>Its okay comments can't be downvoted... yet...</em>
 	<br>
@@ -34,10 +32,11 @@
     <%= f.text_area :body, :rows => 10, :cols => 40	 %>
   </p>
   <p>
-    <%= f.submit class: "btn btn-warning" %>
+    <%= f.submit class: "btn btn-primary" %>
   </p>
 <% end %>
 
 	<%= link_to 'Edit', edit_topic_path(@topic) %> |
 	<%= link_to 'Back', topics_path %>
+</div>
 </div> <!-- /container -->
