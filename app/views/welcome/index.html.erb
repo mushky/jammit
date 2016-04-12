@@ -30,38 +30,8 @@
           <div class="inner cover">
             <h1 class="cover-heading jammit-style">JAMMIT</h1>
             <p class="lead">  
-              <script>
-                /*var end = new Date('02/14/2015 9:00 AM');*/
-                var end = new Date('04/09/2016 7:00 PM')
-
-                var _second = 1000;
-                var _minute = _second * 60;
-                var _hour = _minute * 60;
-                var _day = _hour * 24;
-                var timer;
-
-                function showRemaining() {
-                  var now = new Date();
-                  var distance = end - now;
-                  if (distance < 0) {
-                    clearInterval(timer);
-                    document.getElementById('countdown').innerHTML = 'VOTING IS OVER JERK FACES';
-                    return;
-                  }
-                  var days = Math.floor(distance / _day);
-                  var hours = Math.floor((distance % _day) / _hour);
-                  var minutes = Math.floor((distance % _hour) / _minute);
-                  var seconds = Math.floor((distance % _minute) / _second);
-
-                  document.getElementById('countdown').innerHTML = days + 'days ';
-                  document.getElementById('countdown').innerHTML += hours + 'hrs ';
-                  document.getElementById('countdown').innerHTML += minutes + 'mins ';
-                  document.getElementById('countdown').innerHTML += seconds + 'secs';
-                }
-
-                timer = setInterval(showRemaining, 1000);
-              </script>
-    
+            <%= render '/shared/bigcountdown' %>
+  
             <div id="countdown" class="white-color"></div>
             </p>
             <h3 class="white-color">UNTIL MEOW DAY</h3>

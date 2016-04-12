@@ -1,31 +1,5 @@
 <div class="container">
-  <script>
-    var end = new Date('04/09/2016 7:00 PM')
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    var timer;
-    function showRemaining() {
-      var now = new Date();
-      var distance = end - now;
-        if (distance < 0) {
-          clearInterval(timer);
-          document.getElementById('topicPageCountDown').innerHTML = 'VOTING IS OVER JERK FACES';
-          return;
-        }
-          var days = Math.floor(distance / _day);
-          var hours = Math.floor((distance % _day) / _hour);
-          var minutes = Math.floor((distance % _hour) / _minute);
-          var seconds = Math.floor((distance % _minute) / _second);
-
-          document.getElementById('topicPageCountDown').innerHTML = days + 'days ';
-          document.getElementById('topicPageCountDown').innerHTML += hours + 'hrs ';
-          document.getElementById('topicPageCountDown').innerHTML += minutes + 'mins ';
-          document.getElementById('topicPageCountDown').innerHTML += seconds + 'secs' + " To MEOW Day!";
-        }
-      timer = setInterval(showRemaining, 1000);
-    </script>
+  <%= render 'shared/countdown' %>
   <div id="topicPageCountDown" class="count-down-style"></div>
 
   <table class="table table-bordered well">

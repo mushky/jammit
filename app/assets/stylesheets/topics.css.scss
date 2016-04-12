@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background: url('../images/gunnin.png');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+	background: url('../images/gunnin.png') !important;
+	background-size: cover !important;
+	background-position: center !important;
+	background-attachment: fixed !important;
 }
