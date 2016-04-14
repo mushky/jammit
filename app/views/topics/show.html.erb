@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="white-color">
+  <div class="well">
 	<p id="notice"><%= notice %></p>
 
 	<p>
@@ -19,8 +19,6 @@
   </p>
 	<% end %>
   
-	<h4>Leave a Comment?</h4>
-	<em>Its okay comments can't be downvoted... yet...</em>
 	<br>
 	<%= form_for([@topic, @topic.comments.build]) do |f| %>
   <p>

@@ -1,7 +1,6 @@
 <div class="container">
   <%= render 'shared/countdown' %>
   <div id="topicPageCountDown" class="count-down-style"></div>
-
   <table class="table table-bordered well">
     <thead>
       <tr>
@@ -33,17 +32,14 @@
             <td>
               <%= link_to '<i class="fa fa-arrow-down fa-2x"></i>'.html_safe, downvote_topic_path(topic), method: :delete, data: { confirm: "Downvotes are mean guize..." } %>
             </td>
-            <td>
-              <%= link_to 'DELETE ACTIVITY', topic, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </td>
+<!--             <td>
+              <%#= link_to 'DELETE ACTIVITY', topic, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td> -->
           </tr>
         </div><!-- /table-font-color -->
+
         <% end %>
       </tbody>
     </table>
-    <div class="spacing"></div>
-    <div class="your-disgusting">
-      <em>you're disgusting</em>
-    </div>
-  <div class="spacing"></div>
+    <div class="your-disgusting"><em>you're disgusting</em></div>
 </div> <!-- /container -->
