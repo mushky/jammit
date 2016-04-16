@@ -5,6 +5,10 @@ body {
   color: #5a5a5a;
 }
 
+
+.center {
+text-align: center; position: absolute; top: 50%; bottom: 50%; width: 100%;
+}
 .carousel { z-index: -99; } /* keeps this behind all content */
 
 .carousel .item {
@@ -69,3 +73,4 @@ body {
     opacity:0;
     z-index:2;
 }
+

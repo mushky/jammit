@@ -23,27 +23,28 @@
   <body>
     <%= render '/shared/bigcountdown' %>
     <div id="myCarousel" class="carousel container slide">
-    <div class="carousel-inner">
-      <div class="active item one"></div>
-      <div class="item two"></div>
-      <div class="item three"></div>
-      <div class="item four"></div>
-
-    </div>
+      <div class="carousel-inner">
+        <div class="active item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item four"></div>
+      </div>
     </div>  
-    <div id="countdown" class="white-color"></div>
-    </p>
-    <h3 class="white-color">UNTIL MEOW DAY</h3>
-    <p class="lead">
-      <%= link_to "ENTER JAMMIT", topics_path, class: "btn btn-lg btn-primary"  %>
-    </p>
-  </div>
+    
+    <div class="center">
+      <div id="countdown" class="white-color"></div>
+
+      <h3 class="white-color">UNTIL MEOW DAY</h3>
+      <p class="lead">
+        <%= link_to "ENTER JAMMIT", topics_path, class: "btn btn-lg btn-primary"  %>
+      </p>
 
   <div class="mastfoot">
     <div class="inner">
       You're disgusting
     </div>
   </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
