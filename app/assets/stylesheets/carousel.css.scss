@@ -1,0 +1,71 @@
+/* Carousel Style
+-------------------------------------------------- */
+
+body {
+  color: #5a5a5a;
+}
+
+.carousel { z-index: -99; } /* keeps this behind all content */
+
+.carousel .item {
+    position: fixed; 
+    width: 100%; height: 100%;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.carousel .one {
+  background: image-url('cosmos.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-color: #333;
+}
+
+.carousel .two {
+  background: image-url('Grilled-chicken.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-color: #333;
+}
+
+.carousel .three {
+  background: image-url('sheesha1.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-color: #333;
+}
+
+.carousel .four {
+  background: image-url('alaTurca.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-color: #333;
+}
+.carousel .active.left {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
