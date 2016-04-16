@@ -18,10 +18,10 @@
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
 
-        document.getElementById('topicPageCountDown').innerHTML = days + 'days ';
+        document.getElementById('topicPageCountDown').innerHTML = days + ' days ';
         document.getElementById('topicPageCountDown').innerHTML += hours + 'hrs ';
         document.getElementById('topicPageCountDown').innerHTML += minutes + 'mins ';
-        document.getElementById('topicPageCountDown').innerHTML += seconds + 'secs' + " To MEOW Day!";
+        document.getElementById('topicPageCountDown').innerHTML += seconds + 'secs';
       }
   timer = setInterval(showRemaining, 1000);
 </script>
